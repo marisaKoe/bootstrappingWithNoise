@@ -1,0 +1,17 @@
+#NEXUS 
+
+Begin trees;  [Treefile saved Fri Feb  9 15:49:13 2018]
+[!
+>Consensus of 1000 trees
+>
+>Source of trees from which consensus(es) calculated...
+>
+>Processing TREES block from file:
+>~/Schreibtisch/bootstrappingWithNoise/src/output/nelex/test/trees/nelexAsjp_Abhang::N+allTrees.nwk
+>  Keeping: trees from file (replacing any trees already in memory)
+>  1000 trees read from file
+>
+>  Time used = 0.14 sec (CPU time = 0.13 sec)
+]
+	tree MajRule = [&R] (ron,(((dar,(tur,kaz)99.5)100,udm)91,(ykg,(pol,(slv,slk)56.7)91.5)88,(azj,nio)90.5,(kan,cym)92.6,sqi,(nld,deu)75.8,yrk,bua,jpn,(((mns,kor)99.7,mrj)97.6,pbu)75.5,ell,(ady,eus)77.8,((mdf,myv)100,ita)65.9,(((smj,(olo,vep)89.1)98.3,(sms,smn)100)80.8,ava)52.7,(hun,lit)93.2,(((ukr,bel)100,(oss,(ddo,(ket,khk)100)100)99.1)83,eng)86.9,mnc,(kmr,(uzn,xal)100)79.8,(por,cat)53.7,spa,bsk,lat,mhr,(hin,ben)58.2,(tel,chv)78.5,(sme,sjd)99.6,(isl,koi)94.3,(abk,gle)69.7,((kpv,ekk)100,(bre,lav)54.6)77.8,sel,arb,liv,(sah,(fin,lez)77.4)72.6,(bak,ckt)72.8,heb,gld,((dan,(ces,bul)71.6,nor,((ain,lbe)99.5,rus)99.1)50.6,swe)61.2,(sma,kat,pes)54.7,(hye,(tam,mal)100)60.4,(hrv,krl)61,kal,((evn,cmn)70,yux)57,tat,che)99.3,fra)100;
+end;
