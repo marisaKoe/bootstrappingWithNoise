@@ -1,5 +1,4 @@
 # bootstrappingWithNoise
-Bootstrapping with noise for the evaluation of distance based concept trees
 
 In this program the approach of bootstrapping with noise to evaluate the distance-based concept trees described in chapter 4.1.4. in Köllner (to appear) is coded.
 
