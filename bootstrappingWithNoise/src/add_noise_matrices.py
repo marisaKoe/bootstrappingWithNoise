@@ -6,15 +6,10 @@ Created on 05.12.2016
 this module provides three methods to add noise to a distance matrix
 
 1. one-half of the standard deviation, which varies uniformly 0 <= r <= c (r=noise, c=one-half standard deviation), added differently to each cell
--> this one is used by Nerbonne et al. and should be used for the analysis
-2. one-half of the standard deviation, which varies uniformly 0 <= r <= c (r=noise, c=one-half standard deviation), added to the whole matrix
--> it doesn't make sense to add the noise globally. The variance might not be high enough to estimate
-support values (keep implemented, and check back if the experiment with the language tree is done.
-3. Gaussian noise added to the matrix
--> needs to be implemented if wanted
 
-NOTES:
-* random.uniform(a,b) returns a random integer N such that a <= N <= b (varies uniformly)
+2. one-half of the standard deviation, which varies uniformly 0 <= r <= c (r=noise, c=one-half standard deviation), added to the whole matrix
+
+
 '''
 
 import os
@@ -63,12 +58,8 @@ def std_cellwise(f,dataFolder):
             concept = concept.replace("[","")
             concept = concept.replace("]","")
 
-             
-        #print concept
-        #if concept == "nelexAsjp_Berg::N":
         taxa, mtx = transform_distance_matrices(matrix)
         half_std = std(mtx)/2
-        #print mtx
         #edit_matrices_cellwise(taxa, mtx, half_std, folder, concept)
         edit_matrices_noise(taxa, mtx, half_std, folder, concept, treeFolder, contreeFolder)
 
@@ -106,13 +97,11 @@ def edit_matrices_noise(taxa, mtx, half_std, folder, concept, treeFolder, contre
             S[n2,n1] = mtx[n2,n1]+noise_random
         ##save the noisy matrix in the dictionary
         dict_noiseMtx[i] = S
-        
-        #print "computed ", i
+
     
     for num_mtx, mtx in dict_noiseMtx.items():
         ##create the file for the matrix
         matrix_file = folder+"/noiseMatrix"+str(num_mtx)+".phy"
-        #print matrix_file
         #write the matrix to the file
         phylip_output(mtx, taxa, matrix_file)
         ##reconstruct the tree for the noisy matrix

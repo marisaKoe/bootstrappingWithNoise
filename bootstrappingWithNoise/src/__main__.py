@@ -14,19 +14,9 @@ from add_noise_matrices import std_cellwise
 
 
 if __name__ == '__main__':
-    ##ielex data
-    #data = "IELex"
-    #f = "input/"+data+"/distanceMatricesIELexPMI/*.phy"
-    #std_cellwise(f,data)
     
     ##data NLex
-    #start = timeit.default_timer()
-    #pos = ["binaryFeatures", "phoneticFeatures","CogLev","CogLevGeo", "CogNormHamming", "CogNormHammingGeo", "CogNw", "CogNwGeo", "pmi", "pmiGeo", "pmiMultidata", "pmiMultidataGeo", "sigmoid", "sigmoidGeo", "sigmoidMultidata", "sigmoidMultidataGeo"]
-    ##only the files which might be best for the dissertation, always use synonyms!!!!
-    #note: CogLev rausgenommen, da berechnung unterbrochen wurde, nachher wieder miteinbeziehen
-    pos = ["CogLevGeo", "CogNw", "CogNwGeo", "pmiMultidata", "pmiMultidataGeo", "sigmoidMultidata", "sigmoidMultidataGeo","phoneticFeatures"]
-    #pos = ["languageTree"]
-    #pos = ["test"]
+    pos = ["CogLevGeo", "CogNw", "CogNwGeo", "pmiMultidata", "pmiMultidataGeo", "sigmoidMultidata", "sigmoidMultidataGeo"]
     data = "nelex"
     for p in pos:
 	start = timeit.default_timer()

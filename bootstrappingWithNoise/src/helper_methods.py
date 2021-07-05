@@ -29,10 +29,8 @@ def transform_distance_matrices(matrix):
     #names, longnames = get_language_sample() 
     #reads the matrix into a list
     elements = open(matrix,'rU').read().split()
-    #print elements
     #removes the first row (the number of taxa in the matrix)
     N = int(elements.pop(0))
-    #print type(N), N
     #creates a list for the taxa
     taxa = []
     #fills the default matrix with -inf
@@ -40,7 +38,6 @@ def transform_distance_matrices(matrix):
     
     #got through the list and save the distances in the matrix
     for row, i in enumerate(range(0, len(elements), N+1)):
-        #print i
         #append the first element of the list to the list of taxa
         taxa.append(elements[i])
         #fill the matrix
@@ -84,4 +81,3 @@ if __name__ == '__main__':
     for m in matrix_list:
         t, mtx = transform_distance_matrices(m)
         print type(mtx)
-        #print std(mtx)/2

@@ -20,7 +20,6 @@ def reconstruct_consensus(treeFolder, concept, contreeFolder):
     treePath = os.getcwd()+"/"+treeFolder+concept+"+allTrees.nwk"
     
     contree = contreeFolder+treePath.split("/")[-1].split('.')[0]+'.con.tre'
-    #print contree
     ##create the skript for paup and save the trees in a file
     paupSkript = """#Nexus
     Begin paup;
@@ -30,7 +29,6 @@ def reconstruct_consensus(treeFolder, concept, contreeFolder):
     q;
     end;
     """
-    #print paupSkript
     ##open the paup script
     with open(wdir+'/paupCommands.nex','w') as f:
         ##write
